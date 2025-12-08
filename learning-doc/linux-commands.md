@@ -6,3 +6,4 @@
 | jupyter nbconvert --to pdf file.ipynb | Convert Jupyter notebook to PDF | - |
 | mv file /path | Move or rename file | mv oldname newname |
 | sudo apt install ./discord-*.deb | Install Discord .deb file | - |
+| libreoffice --headless --convert-to doc yourfile.odt | converts odt to doc file | headless: doesn't open the doc as window, convertion happens in background|
