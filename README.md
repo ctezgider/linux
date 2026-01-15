@@ -1,4 +1,7 @@
 # linux
+
+This repository focuses on linux self-learning and contains educational projects & documentations.
+
 ```text
 .
 ├── learning-doc
@@ -10,4 +13,4 @@
     └── update-discord.sh
 
 3 directories, 5 files
-This repository focuses on linux self-learning and contains educational projects & documentations.
+
