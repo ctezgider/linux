@@ -1,8 +1,14 @@
-#/!bin/bash
+#!/bin/bash
 
 # Checks the using of disk and
 
-THRESHOLD=80
+LOGFILE="$HOME/disc_check.log"
+THRESHOLD=${1:-80}
+
+if ! [[ "$THRESHOLD" =~ ^[0-9]+$ ]]; then
+	echo "$(date): ERROR - Threshold is not a number: $THRESHOLD" >> "$LOGFILE"
+	exit 2
+fi 
 
 usage=$(df -h /home | awk 'NR==2 {print $5}' | cut -d'%' -f1)
 
@@ -12,3 +18,5 @@ if [ "$usage" -gt "$THRESHOLD" ]; then
 else
 	echo "Disk usage is normal: $usage% "
 fi
+
+echo "$(date): Disk usage OK: $usage%" >> "$LOGFILE"
