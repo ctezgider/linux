@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Checks the using of disk and
+# Checks the usage of disc acceptable by default/given percentage.
+# Checks if given paramter number
+# Saves the result in disc_check.log file
 
 LOGFILE="$HOME/disc_check.log"
 THRESHOLD=${1:-80}
