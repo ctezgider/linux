@@ -17,3 +17,4 @@
 | git add file.x | |
 | git commit -m "message" | |
 | git push | |
+| tree -L 2 -I tree.txt > tree.txt | creates tree structure in directory and saves in tree.txt | -L: Level, depth limit of tree I: ignores tree.txt in tree structure |
