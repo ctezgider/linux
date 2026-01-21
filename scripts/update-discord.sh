@@ -21,11 +21,11 @@ if [[ -n "$SIZE" ]]; then
 	echo "Found update: ${SIZE_MB} MB"
 
 	read -rp "Want to update Discord? [y/N]: " answer
-	case "$asnwer" in
+	case "$answer" in
 		y|Y|yes|YES)
 			echo "Downloading update..."
 			cd "$TMP_DIR"
-			wget -0 discord-lastest.deb "$URL"
+			wget -O discord-lastest.deb "$URL"
 
 			echo "Installing update..."
 			sudo apt install -y ./discord-latest.deb
