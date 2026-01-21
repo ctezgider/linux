@@ -29,7 +29,7 @@ if [[ -n "$SIZE" ]]; then
 
 			echo "Installing update..."
 			sudo apt install -y ./discord-latest.deb
-			rm -f discord-lastest.deb
+			rm -f discord-latest.deb
 			;;
 		*)
 			echo "Skipping update."
