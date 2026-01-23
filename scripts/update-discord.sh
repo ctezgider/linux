@@ -25,7 +25,7 @@ if [[ -n "$SIZE" ]]; then
 		y|Y|yes|YES)
 			echo "Downloading update..."
 			cd "$TMP_DIR"
-			wget -O discord-lastest.deb "$URL"
+			wget -O discord-latest.deb "$URL"
 
 			echo "Installing update..."
 			sudo apt install -y ./discord-latest.deb
@@ -38,6 +38,9 @@ if [[ -n "$SIZE" ]]; then
 else
 	echo "No update information found."
 fi
+
+echo "Closing old Discord instances..."
+pkill -f discord || true
 
 echo "Starting Discord..."
 exec /usr/bin/discord
